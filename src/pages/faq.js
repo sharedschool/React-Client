@@ -1,14 +1,12 @@
 import React from 'react';
 import { Row, Col } from "react-bootstrap";
 import { Helmet } from "react-helmet";
-import './home.css';
-import { DemoBtn } from '../helpers/demo';
 
 export function Faq(){
   return (
     <div id="page-content" className="faq-page">
       <Helmet>
-        <title>Home | SharedSchool</title>
+        <title>FAQ | SharedSchool</title>
       </Helmet>
       <Row className="justify-content-center">
         <Col xl="6" className="align-md-left">

@@ -2,8 +2,13 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import { Home } from './pages/home';
+
 import { Platform } from './pages/platform';
+
 import { Faq } from './pages/faq';
+
+import { About } from './pages/about';
+import { Contact } from './pages/contact';
 
 function Uses(){
   return <div>Uses page</div>;
@@ -11,14 +16,6 @@ function Uses(){
 
 function Blog(){
   return <div>Blog page</div>;
-}
-
-function About(){
-  return <div>About page</div>;
-}
-
-function Contact(){
-  return <div>Contact page</div>;
 }
 
 export function MyMain(){

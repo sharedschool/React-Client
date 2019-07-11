@@ -1,0 +1,7 @@
+.contact-page#page-content {
+	background-image: url("/img/contact-bg.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 0% 50%;
+	min-height: 500px;
+}
