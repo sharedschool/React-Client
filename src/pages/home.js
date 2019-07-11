@@ -1,11 +1,15 @@
 import React from 'react';
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import './home.css';
 import { DemoBtn } from '../helpers/demo';
 
 export function Home(){
   return (
-    <div id="page-content" class="home-page">
+    <div id="page-content" className="home-page">
+      <Helmet>
+        <title>Home | SharedSchool</title>
+      </Helmet>
       <Row className="justify-content-center">
         <Col md="5" className="deadCenter">
           <h1 className="blue-header">Make use of your school's surplus</h1>
@@ -15,7 +19,7 @@ export function Home(){
           <DemoBtn style={{alignSelf:'flex-start'}} />
         </Col>
         <Col md="6" className="deadCenter">
-          <img className="img-fluid" src="/img/home-1.png" width="550" />
+          <img className="img-fluid" src="/img/home-1.png" width="550" alt="Man with Clipboard"/>
         </Col>
       </Row>
       <Row className="justify-content-center">
@@ -29,81 +33,81 @@ export function Home(){
         <Col md="6" className="deadCenter">
           <Row className="justify-content-center">
             <Col>
-              <img src="/img/home-social.png" class="for-icon"/>
-              <h6 class="gray">FOR</h6>
-              <h5 class="blue-header">Social Good</h5>
-              <p class="gray for-p">
+              <img src="/img/home-social.png" className="for-icon" alt="Social Good"/>
+              <h6 className="gray">FOR</h6>
+              <h5 className="blue-header">Social Good</h5>
+              <p className="gray for-p">
                 Directly help other schools obtain necessary educational materials from your surplus.
               </p>
             </Col>
             <Col>
-              <img src="/img/home-revenue.png" class="for-icon"/>
-              <h6 class="gray">FOR</h6>
-              <h5 class="blue-header">Generating Revenue</h5>
-              <p class="gray for-p">
+              <img src="/img/home-revenue.png" className="for-icon" alt="Generating Revenue"/>
+              <h6 className="gray">FOR</h6>
+              <h5 className="blue-header">Generating Revenue</h5>
+              <p className="gray for-p">
                 Generate revenue for your school through our buy/sell or rent feature.
               </p>
             </Col>
           </Row>
           <Row className="justify-content-center">
             <Col>
-              <img src="/img/home-resources.png" class="for-icon"/>
-  						<h6 class="gray">FOR</h6>
-  						<h5 class="blue-header">Acquiring Resources</h5>
-  						<p class="gray for-p">
+              <img src="/img/home-resources.png" className="for-icon" alt="Acquiring Resources"/>
+  						<h6 className="gray">FOR</h6>
+  						<h5 className="blue-header">Acquiring Resources</h5>
+  						<p className="gray for-p">
   							Find the specialized educational materials you need for your school.
   						</p>
             </Col>
             <Col>
-              <img src="/img/home-space.png" class="for-icon"/>
-  						<h6 class="gray">FOR</h6>
-  						<h5 class="blue-header">Freeing Up Space</h5>
-  						<p class="gray for-p">
+              <img src="/img/home-space.png" className="for-icon" alt="Freeing Up Space"/>
+  						<h6 className="gray">FOR</h6>
+  						<h5 className="blue-header">Freeing Up Space</h5>
+  						<p className="gray for-p">
   							Quickly free up storage for your school using our easy and flexible platform.
   						</p>
             </Col>
           </Row>
         </Col>
       </Row>
-      <div class="deadCenter">
+      <div className="deadCenter">
         <Row className="justify-content-center">
-          <Col><h1 class="blue-header">The SharedSchool Process</h1></Col>
+          <Col><h1 className="blue-header">The SharedSchool Process</h1></Col>
         </Row>
         <Row className="justify-content-center process">
           <Col>
-            <div class="break d-none d-md-block"></div>
-            <div class="break d-none d-md-block"></div>
-            <div class="break d-none d-md-block"></div>
-            <div class="break d-none d-md-block"></div>
-            <img src="/img/home-identify.png" />
+            <div className="break d-none d-md-block"></div>
+            <div className="break d-none d-md-block"></div>
+            <div className="break d-none d-md-block"></div>
+            <div className="break d-none d-md-block"></div>
+            <img src="/img/home-identify.png" alt="Identify"/>
     				<h6>Identify</h6>
     				<p>Find excess materials you don't need.</p>
           </Col>
           <Col>
-            <div class="break d-none d-md-block"></div>
-    				<div class="break d-none d-md-block"></div>
-    				<img src="/img/home-list.png" />
+            <div className="break d-none d-md-block"></div>
+    				<div className="break d-none d-md-block"></div>
+    				<img src="/img/home-list.png" alt="List"/>
     				<h6>List</h6>
     				<p>Directly input your product details online or with our mobile app.</p>
           </Col>
           <Col>
-            <img src="/img/home-match.png" />
+            <img src="/img/home-match.png" alt="Match"/>
     				<h6>Match</h6>
     				<p>Connect directly with schools who are in need of your products.</p>
           </Col>
           <Col>
-            <div class="break d-none d-md-block"></div>
-    				<div class="break d-none d-md-block"></div>
-    				<img src="/img/home-connect.png" />
+            <div className="break d-none d-md-block"></div>
+    				<div className="break d-none d-md-block"></div>
+    				<img src="/img/home-connect.png" alt="Connect"/>
     				<h6>Connect</h6>
     				<p>Discuss potential transactions with the school you have been matched with.</p>
           </Col>
           <Col>
-            <div class="break d-none d-md-block"></div>
-            <div class="break d-none d-md-block"></div>
-            <div class="break d-none d-md-block"></div>
-            <div class="break d-none d-md-block"></div>
-            <img src="/img/home-complete.png" />
+            <div className="break d-none d-md-block"></div>
+            <div className="break d-none d-md-block"></div>
+            <div className="break d-none d-md-block"></div>
+            <div className="break d-none d-md-block"></div>
+            <img src="/img/home-complete.png" alt="Complete"/>
             <h6>Complete</h6>
             <p>Finalize details and decide on shipment method.</p>
           </Col>

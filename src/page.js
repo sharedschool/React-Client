@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import { Home } from './pages/home';
 import { Platform } from './pages/platform';
+import { Faq } from './pages/faq';
 
 function Uses(){
   return <div>Uses page</div>;
@@ -10,10 +11,6 @@ function Uses(){
 
 function Blog(){
   return <div>Blog page</div>;
-}
-
-function Faq(){
-  return <div>FAQ page</div>;
 }
 
 function About(){

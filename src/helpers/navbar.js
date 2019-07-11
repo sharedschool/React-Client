@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, NavItem, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
+import { Nav, Navbar, NavDropdown, Form } from "react-bootstrap";
 import { LoginBtn, SignupBtn } from "./modals";
 
 export function MyNavBar(){

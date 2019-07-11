@@ -104,7 +104,7 @@ export class SignupBtn extends React.Component {
           Sign up
         </Button>
 
-        <Modal show={this.state.show == 1 ? true : false} onHide={this.handleClose}>
+        <Modal show={this.state.show === 1 ? true : false} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title as="h5">Sign Up for SharedSchool</Modal.Title>
           </Modal.Header>
@@ -130,7 +130,7 @@ export class SignupBtn extends React.Component {
           </Modal.Body>
         </Modal>
 
-        <Modal show={this.state.show == 2 ? true : false} onHide={this.handleClose}>
+        <Modal show={this.state.show === 2 ? true : false} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title as="h5">Sign Up for SharedSchool &gt; Admin</Modal.Title>
           </Modal.Header>
@@ -188,7 +188,7 @@ export class SignupBtn extends React.Component {
           </Modal.Body>
         </Modal>
 
-        <Modal show={this.state.show == 3 ? true : false} onHide={this.handleClose}>
+        <Modal show={this.state.show === 3 ? true : false} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title as="h5">Sign Up for SharedSchool &gt; User</Modal.Title>
           </Modal.Header>
