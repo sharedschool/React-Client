@@ -1,7 +1,3 @@
-.clearNav .navbar {
-	background: none;
-	transition: background 0.5s ease;
-}
 body.platform-page {
 	background-image: url('/img/platform-bg.png');
 	background-size: 100% 529px;

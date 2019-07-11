@@ -10,13 +10,8 @@ import { Faq } from './pages/faq';
 import { About } from './pages/about';
 import { Contact } from './pages/contact';
 
-function Uses(){
-  return <div>Uses page</div>;
-}
-
-function Blog(){
-  return <div>Blog page</div>;
-}
+import { NotFound } from './pages/notfound';
+import { ComingSoon } from './pages/comingsoon';
 
 export function MyMain(){
   return (
@@ -24,13 +19,15 @@ export function MyMain(){
       <Route exact path='/' component={Home}/>
 
       <Route exact path='/platform' component={Platform}/>
-      <Route exact path='/uses' component={Uses}/>
+      <Route exact path='/uses' component={ComingSoon}/>
 
-      <Route exact path='/blog' component={Blog}/>
+      <Route exact path='/blog' component={ComingSoon}/>
       <Route exact path='/faq' component={Faq}/>
 
       <Route exact path='/about' component={About}/>
       <Route exact path='/contact' component={Contact}/>
+
+      <Route component={NotFound}/>
     </Switch>
   );
 }

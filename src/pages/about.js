@@ -15,12 +15,17 @@ function ProfilePic(props, context){
 }
 
 export class About extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
   componentDidMount() {
     document.body.classList.add('clearNav');
     window.addEventListener('scroll', this.handleScroll);
   }
   handleScroll(event){
-    var scroll_start = event.srcElement.body.scrollTop;
+    var scroll_start = event.srcElement.scrollingElement.scrollTop;
     if (scroll_start < 50){
       document.body.classList.add('clearNav');
     } else {
