@@ -1,0 +1,44 @@
+#page-content > div {
+	padding: 15px;
+}
+
+#page-content.home-page > div:nth-child(even) {
+	background: #fafafa;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+h6.gray {
+	margin-bottom: 0;
+	font-size: 16px;
+}
+
+#faqAccordion > .collapse {
+	width: 100%;
+}
+
+img.for-icon {
+	height: 100px;
+}
+
+p.for-p {
+	font-size: 14px;
+}
+
+.process > div.col {
+	text-align: center;
+}
+
+.process img {
+	height: 120px;
+	margin-bottom: 10px;
+}
+
+.process h6 {
+	color: #47b1e4;
+	font-weight: bold;
+	font-size: 20px;
+}

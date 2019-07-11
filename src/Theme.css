@@ -1,0 +1,102 @@
+body {
+	font-family: Quicksand, Roboto, sans-serif;
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.blue-header, .modal-title {
+	color: #3a53a4;
+	font-weight: bold;
+}
+
+.green-header {
+	color: #78ced3;
+	font-weight: bold;
+}
+
+.blue {
+	background: #3a53a4;
+	color: white;
+}
+
+.gray {
+	color: #636261;
+}
+
+.headline {
+	font-size: 20px;
+}
+
+.nav-btn, .nav-item {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.dropdown-toggle::after {
+	display:none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+	margin-top: -2px;
+}
+
+.deadCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+div.break {
+	height: 24px;
+}
+
+.footer .nav-link.active, .footer .nav-link:hover {
+	color: white;
+}
+
+.footer .nav-link {
+	color: #bbbaba;
+}
+
+hr {
+	border: 1px solid #636261;
+}
+
+.odd {
+	background: #fafafa;
+}
+
+/* Signup modal */
+
+.modal-title {
+	width: 100%;
+	text-align: center;
+}
+
+.signup-btn, .signup-btn:hover {
+	color: white;
+	min-width: 100px;
+	min-height: 100px;
+	border: none;
+}
+
+.signup-btn.signup-admin { background-color: #3fbbec; }
+.signup-btn.signup-admin:hover { background-color: #25aade; }
+
+.signup-btn.signup-user { background-color: #2f66ce; }
+.signup-btn.signup-user:hover { background-color: #2652a4; }
+
+
+.demo-btn, .green-btn { background: #6bcce0; border: none; }
+.demo-btn:hover, .green-btn:hover { background: #3999ad; }
+
+.dropdown-item:hover {
+	color: #3a53a4;
+	background: white;
+}
