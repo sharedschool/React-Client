@@ -24,7 +24,7 @@ export class DemoBtn extends React.Component {
   render() {
     return (
       <>
-        <Button variant="primary" size="lg" className="demo-btn green-btn" style={this.style}>
+        <Button variant="primary" size="lg" className="demo-btn green-btn" onClick={this.handleShow} style={this.style}>
           Request a Demo
         </Button>
 
@@ -51,7 +51,7 @@ export class DemoBtn extends React.Component {
                   <Form.Label>Message (optional)</Form.Label>
                   <Form.Control as="textarea" name="message" rows="3" />
                 </Form.Group>
-                <Button type="submit" variant="primary">Log in</Button>
+                <Button type="submit" variant="primary">Request Your Demo</Button>
               </Form>
             </div>
           </Modal.Body>
