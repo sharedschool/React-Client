@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal, Button, Form, Row, Col, OverlayTrigger, Popover } from "react-bootstrap";
+import { Auth } from "aws-amplify";
 
 export class LoginBtn extends React.Component {
   constructor(props, context) {
@@ -7,10 +8,20 @@ export class LoginBtn extends React.Component {
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.querystring = this.querystring.bind(this);
 
     this.state = {
       show: false,
+      isLoading: false,
+		  email: "",
+		  password: ""
     };
+  }
+
+  componentDidMount(){
+    if (this.querystring("login") == 1) this.handleShow();
   }
 
   handleClose() {
@@ -20,6 +31,41 @@ export class LoginBtn extends React.Component {
   handleShow() {
     this.setState({ show: true });
   }
+
+  handleChange(event) {
+		this.setState({
+		  [event.target.id]: event.target.value
+		});
+	}
+
+  querystring(name, url = window.location.href) {
+    name = name.replace(/[[]]/g, "\\$&");
+
+    const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i");
+    const results = regex.exec(url);
+
+    if (!results) {
+      return null;
+    }
+    if (!results[2]) {
+      return "";
+    }
+
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  async handleSubmit(event) {
+	  event.preventDefault();
+	  this.setState({ isLoading: true });
+	  try {
+  		await Auth.signIn(this.state.email, this.state.password);
+  		this.props.userHasAuthenticated(true);
+      this.props.history.push("/portal/");
+	  } catch (e) {
+  		alert(e.message);
+  		this.setState({ isLoading: false });
+	  }
+	}
 
   render() {
     return (
@@ -34,14 +80,24 @@ export class LoginBtn extends React.Component {
           </Modal.Header>
           <Modal.Body style={{textAlign:'center'}}>
             <div className="login-form">
-              <Form>
-                <Form.Group>
+              <Form onSubmit={this.handleSubmit}>
+                <Form.Group controlId="email">
                   <Form.Label>Email address</Form.Label>
-                  <Form.Control type="email" placeholder="Email address" name="email" />
+                  <Form.Control
+                    type="email"
+                    placeholder="Email address"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                  />
                 </Form.Group>
-                <Form.Group>
+                <Form.Group controlId="password">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" name="password" />
+                  <Form.Control
+                    type="password"
+                    placeholder="Password"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                  />
                 </Form.Group>
                 <Button type="submit" variant="primary">Log in</Button>
               </Form>
@@ -63,7 +119,7 @@ export class SignupBtn extends React.Component {
     this.handleClose = this.handleClose.bind(this);
 
     this.state = {
-      show: 0,
+      show: 0
     };
   }
 
