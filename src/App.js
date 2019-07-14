@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
 import { Auth } from "aws-amplify";
-import { AppliedRoute, AuthenticatedRoute } from './helpers/routes';
+import { AuthenticatedRoute, UnauthenticatedRoute } from './helpers/routes';
 import './Theme.css';
 import './App.css';
 import { MyMain } from './page';
@@ -36,10 +36,12 @@ export class App extends React.Component {
 	  this.setState({ isAuthenticated: authenticated });
 	}
 
-	async handleLogout(event) {
-	  await Auth.signOut();
-	  this.userHasAuthenticated(false);
-	  this.props.history.push("/");
+	async handleLogout(props) {
+    await Auth.signOut();
+    this.setState({ isAuthenticating: true });
+    props.history.push('/');
+    this.userHasAuthenticated(false);
+    this.setState({ isAuthenticating: false });
 	}
   render(){
     const childProps = {
@@ -48,10 +50,11 @@ export class App extends React.Component {
       logOut: this.handleLogout
 	  };
     return (
+      !this.state.isAuthenticating &&
       <div className="App">
         <Switch>
           <AuthenticatedRoute path="/portal" component={Portal} props={childProps} />
-          <AppliedRoute component={MyMain} props={childProps} />
+          <UnauthenticatedRoute component={MyMain} props={childProps} />
         </Switch>
       </div>
     );
