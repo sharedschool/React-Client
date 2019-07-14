@@ -2,7 +2,10 @@ import React from 'react';
 import { Nav, Navbar, NavDropdown, Form, Button } from "react-bootstrap";
 
 export class MyNavbar extends React.Component {
+
   render(){
+    const {...props} = this.props;
+	console.log(this.props);
     return (
       <Navbar variant="dark" className="blue" expand="lg" sticky="top">
         <Navbar.Brand href="/">
@@ -31,7 +34,7 @@ export class MyNavbar extends React.Component {
             </Nav.Item>
           </Nav>
           <Form inline className="my-2 my-lg-0">
-            <Button variant="outline-light" className="nav-btn" onClick={this.logOut}>
+            <Button variant="outline-light" className="nav-btn" onClick={() => this.props.logOut(this.props)}>
               Log Out
             </Button>
           </Form>
