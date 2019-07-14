@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
 import { Auth } from "aws-amplify";
-import { AuthenticatedRoute, UnauthenticatedRoute } from './helpers/routes';
+import { AppliedRoute, AuthenticatedRoute, UnauthenticatedRoute } from './helpers/routes';
 import './Theme.css';
 import './App.css';
 import { MyMain } from './page';
@@ -54,7 +54,7 @@ export class App extends React.Component {
       <div className="App">
         <Switch>
           <AuthenticatedRoute path="/portal" component={Portal} props={childProps} />
-          <UnauthenticatedRoute component={MyMain} props={childProps} />
+          <AppliedRoute component={MyMain} props={childProps} />
         </Switch>
       </div>
     );
