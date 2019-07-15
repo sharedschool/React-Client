@@ -21,7 +21,7 @@ export class LoginBtn extends React.Component {
   }
 
   componentDidMount(){
-    if (this.querystring("login") == 1) this.handleShow();
+    if (this.querystring("login") === 1) this.handleShow();
   }
 
   handleClose() {

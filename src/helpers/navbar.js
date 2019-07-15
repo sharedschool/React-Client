@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, NavDropdown, Form } from "react-bootstrap";
+import { Nav, Navbar, NavDropdown, Form, Button } from "react-bootstrap";
 import { LoginBtn, SignupBtn } from "./modals";
 
 export class MyNavBar extends React.Component{
@@ -25,11 +25,28 @@ export class MyNavBar extends React.Component{
               <NavDropdown.Item href="/about/">About Us</NavDropdown.Item>
               <NavDropdown.Item href="/contact/">Contact Us</NavDropdown.Item>
             </NavDropdown>
+            {
+              this.props.isAuthenticated ?
+              <Nav.Item>
+                <Nav.Link href="/portal/">PORTAL</Nav.Link>
+              </Nav.Item>
+              : <></>
+            }
           </Nav>
           <div style={{width:'30px'}}></div>
           <Form inline className="my-2 my-lg-0">
-            <LoginBtn {...props} {...this.props}/>
-            <SignupBtn {...props} {...this.props}/>
+            {
+              this.props.isAuthenticated
+              ?
+              <Button variant="outline-light" className="nav-btn" onClick={() => this.props.logOut(this.props)}>
+                Log Out
+              </Button>
+              :
+              <>
+              <LoginBtn {...props} {...this.props}/>
+              <SignupBtn {...props} {...this.props}/>
+              </>
+            }
           </Form>
         </Navbar.Collapse>
       </Navbar>

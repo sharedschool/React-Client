@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
 import { AppliedRoute } from './helpers/routes';
-import {MyNavBar} from './helpers/navbar';
-import {MyFooter} from './helpers/footer';
+import { MyNavBar } from './helpers/navbar';
+import { MyFooter } from './helpers/footer';
 
 import { Home } from './pages/home';
 import { Platform } from './pages/platform';
