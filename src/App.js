@@ -43,19 +43,19 @@ export class App extends React.Component {
 	  this.userHasAuthenticated(false);
 	  this.setState({ isAuthenticating: false });
 	}
-	
+
   render(){
     const childProps = {
   		isAuthenticated: this.state.isAuthenticated,
   		userHasAuthenticated: this.userHasAuthenticated,
 		logOut: this.handleLogout
 	  };
-    return ( 
+    return (
 	  !this.state.isAuthenticating &&
       <div className="App">
         <Switch>
           <AuthenticatedRoute path="/portal" component={Portal} props={childProps} />
-          <UnauthenticatedRoute component={MyMain} props={childProps} />
+          <AppliedRoute component={MyMain} props={childProps} />
         </Switch>
       </div>
     );

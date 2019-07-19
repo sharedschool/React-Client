@@ -21,14 +21,14 @@ export class MyMain extends React.Component{
         <Switch>
           <AppliedRoute exact path='/' component={Home} props={this.props}/>
 
-          <AppliedRoute path='/platform' component={Platform} props={this.props}/>
-          <AppliedRoute path='/uses' component={ComingSoon} props={this.props}/>
+          <AppliedRoute exact path='/platform' component={Platform} props={this.props}/>
+          <AppliedRoute exact path='/uses' component={ComingSoon} props={this.props}/>
 
-          <AppliedRoute path='/blog' component={ComingSoon} props={this.props}/>
-          <AppliedRoute path='/faq' component={Faq} props={this.props}/>
+          <AppliedRoute exact path='/blog' component={ComingSoon} props={this.props}/>
+          <AppliedRoute exact path='/faq' component={Faq} props={this.props}/>
 
-          <AppliedRoute path='/about' component={About} props={this.props}/>
-          <AppliedRoute path='/contact' component={Contact} props={this.props}/>
+          <AppliedRoute exact path='/about' component={About} props={this.props}/>
+          <AppliedRoute exact path='/contact' component={Contact} props={this.props}/>
 
           <AppliedRoute component={NotFound}/>
         </Switch>

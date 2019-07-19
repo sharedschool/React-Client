@@ -4,8 +4,6 @@ import { Nav, Navbar, NavDropdown, Form, Button } from "react-bootstrap";
 export class MyNavbar extends React.Component {
 
   render(){
-    const {...props} = this.props;
-	console.log(this.props);
     return (
       <Navbar variant="dark" className="blue" expand="lg" sticky="top">
         <Navbar.Brand href="/">
