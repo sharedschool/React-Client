@@ -6,7 +6,7 @@ export class MyNavbar extends React.Component {
     return (
       <Navbar variant="dark" className="blue" expand="lg" sticky="top">
         <Navbar.Brand href="/">
-          <img src="/img/logo_text.png" height="40" className="d-inline-block align-top" alt="SharedSchool" />
+          <img src="/img/logo_text_portal.png" height="40" className="d-inline-block align-top" alt="SharedSchool" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

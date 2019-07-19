@@ -81,10 +81,21 @@ export class About extends React.Component {
             <ProfilePic src="/img/about-prateek.jpeg" name="Prateek Humane" role="CTO" />
             <ProfilePic src="/img/about-peter.jpeg" name="Peter Linder" role="VP of Engineering" />
           </Row>
-          <Row className="justify-content-center">
+          <Row className="justify-content-center row-bottom">
             <ProfilePic src="/img/about-rohan.jpeg" name="Rohan Kansagra" role="VP of Business Development" />
             <ProfilePic src="/img/about-james.jpeg" name="James Narayanan" role="Frontend Engineer Intern" />
             <ProfilePic src="/img/about-arjun.jpeg" name="Arjun Singh" role="Sales and Research Intern" />
+          </Row>
+        </div>
+        <div className="meet-team">
+          <Row className="justify-content-center row-top odd">
+            <Col md="12" className="deadCenter">
+              <h1 className="blue-header">Meet the Team</h1>
+            </Col>
+          </Row>
+          <Row className="justify-content-center row-bottom odd">
+            <ProfilePic src="/img/about-jonathan.jpeg" name="Jonathan Barcus" role="Oracle Developer" />
+            <ProfilePic src="/img/about-sarah.jpeg" name="Sarah Hernholm" role="Founder of WIT" />
           </Row>
         </div>
       </div>

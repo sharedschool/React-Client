@@ -100,6 +100,19 @@ export class Platform extends React.Component {
             <Button variant="primary" size="lg" className="green-btn">Learn More</Button>
           </Col>
         </Row>
+        <Row className="flex-wrap-reverse justify-content-center align-items-center even">
+          <Col md="7" className="text-md-left">
+            <h3 className="green-header">SECURE</h3>
+            <h2 className="blue-header">A safe and secure network for your district</h2>
+            <p className="gray headline">
+              Sell, donate and receive surplus from people you know and can trust. Our secure network ensures that only schools are on our platform.
+            </p>
+            <Button variant="primary" size="lg" className="green-btn">Learn More</Button>
+          </Col>
+          <Col md="3" className="deadCenter">
+            <img className="img-fluid" src="/img/platform-secure.png" width="120" alt="Lock"/>
+          </Col>
+        </Row>
       </div>
     );
   }
