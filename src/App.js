@@ -37,24 +37,25 @@ export class App extends React.Component {
 	}
 
 	async handleLogout(props) {
-    await Auth.signOut();
-    this.setState({ isAuthenticating: true });
-    props.history.push('/');
-    this.userHasAuthenticated(false);
-    this.setState({ isAuthenticating: false });
+	  await Auth.signOut();
+	  this.setState({ isAuthenticating: true });
+	  props.history.push('/');
+	  this.userHasAuthenticated(false);
+	  this.setState({ isAuthenticating: false });
 	}
+	
   render(){
     const childProps = {
   		isAuthenticated: this.state.isAuthenticated,
   		userHasAuthenticated: this.userHasAuthenticated,
-      logOut: this.handleLogout
+		logOut: this.handleLogout
 	  };
-    return (
-      !this.state.isAuthenticating &&
+    return ( 
+	  !this.state.isAuthenticating &&
       <div className="App">
         <Switch>
           <AuthenticatedRoute path="/portal" component={Portal} props={childProps} />
-          <AppliedRoute component={MyMain} props={childProps} />
+          <UnauthenticatedRoute component={MyMain} props={childProps} />
         </Switch>
       </div>
     );
