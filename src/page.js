@@ -13,27 +13,27 @@ import { NotFound } from './pages/notfound';
 import { ComingSoon } from './pages/comingsoon';
 
 export class MyMain extends React.Component{
-  render(){
-    const {...props} = this.props;
-    return (
-      <>
-        <MyNavBar {...props} {...this.props} />
-        <Switch>
-          <AppliedRoute exact path='/' component={Home} props={this.props}/>
+	render(){
+		const {...props} = this.props;
+		return (
+			<>
+				<MyNavBar {...props} {...this.props} />
+				<Switch>
+					<AppliedRoute exact path='/' component={Home} props={this.props}/>
 
-          <AppliedRoute exact path='/platform' component={Platform} props={this.props}/>
-          <AppliedRoute exact path='/uses' component={ComingSoon} props={this.props}/>
+					<AppliedRoute exact path='/platform' component={Platform} props={this.props}/>
+					<AppliedRoute exact path='/uses' component={ComingSoon} props={this.props}/>
 
-          <AppliedRoute exact path='/blog' component={ComingSoon} props={this.props}/>
-          <AppliedRoute exact path='/faq' component={Faq} props={this.props}/>
+					<AppliedRoute exact path='/blog' component={ComingSoon} props={this.props}/>
+					<AppliedRoute exact path='/faq' component={Faq} props={this.props}/>
 
-          <AppliedRoute exact path='/about' component={About} props={this.props}/>
-          <AppliedRoute exact path='/contact' component={Contact} props={this.props}/>
+					<AppliedRoute exact path='/about' component={About} props={this.props}/>
+					<AppliedRoute exact path='/contact' component={Contact} props={this.props}/>
 
-          <AppliedRoute component={NotFound}/>
-        </Switch>
-        <MyFooter props={this.props}/>
-      </>
-    );
-  }
+					<AppliedRoute component={NotFound}/>
+				</Switch>
+				<MyFooter props={this.props}/>
+			</>
+		);
+	}
 }

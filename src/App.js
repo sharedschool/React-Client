@@ -11,8 +11,8 @@ export class App extends React.Component {
   constructor(props) {
 	  super(props);
 
-    this.userHasAuthenticated = this.userHasAuthenticated.bind(this);
-    this.handleLogout = this.handleLogout.bind(this);
+	this.userHasAuthenticated = this.userHasAuthenticated.bind(this);
+	this.handleLogout = this.handleLogout.bind(this);
 
 	  this.state = {
   		isAuthenticated: false,
@@ -45,20 +45,20 @@ export class App extends React.Component {
 	}
 
   render(){
-    const childProps = {
+	const childProps = {
   		isAuthenticated: this.state.isAuthenticated,
   		userHasAuthenticated: this.userHasAuthenticated,
 		logOut: this.handleLogout
 	  };
-    return (
+	return (
 	  !this.state.isAuthenticating &&
-      <div className="App">
-        <Switch>
-          <AuthenticatedRoute path="/portal" component={Portal} props={childProps} />
-          <AppliedRoute component={MyMain} props={childProps} />
-        </Switch>
-      </div>
-    );
+	  <div className="App">
+		<Switch>
+		  <AuthenticatedRoute path="/portal" component={Portal} props={childProps} />
+		  <AppliedRoute component={MyMain} props={childProps} />
+		</Switch>
+	  </div>
+	);
   }
 }
 
