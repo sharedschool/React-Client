@@ -5,6 +5,7 @@ export class DemoBtn extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.style = props.style ? props.style : {};
+    this.classes = props.className ? props.className : "";
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
 
@@ -24,7 +25,7 @@ export class DemoBtn extends React.Component {
   render() {
     return (
       <>
-        <Button variant="primary" size="lg" className="demo-btn green-btn" onClick={this.handleShow} style={this.style}>
+        <Button variant="primary" size="lg" className={`demo-btn green-btn ${this.classes}`} onClick={this.handleShow} style={this.style}>
           Request a Demo
         </Button>
 

@@ -11,24 +11,24 @@ export function Home(){
         <title>Home | SharedSchool</title>
       </Helmet>
       <Row className="justify-content-center">
-        <Col md="5" className="deadCenter">
+        <Col md="5" className="deadCenter text-center text-md-left">
           <h1 className="blue-header">Make use of your school's surplus</h1>
           <p className="gray headline">
             Modern EdTech platform that directly connects schools to each other based on your needs and surplus. Scale your surplus and find the educational resources you need!
           </p>
-          <DemoBtn style={{alignSelf:'flex-start'}} />
+          <DemoBtn className="align-self-md-baseline" />
         </Col>
         <Col md="6" className="deadCenter">
           <img className="img-fluid" src="/img/home-1.png" width="550" alt="Man with Clipboard"/>
         </Col>
       </Row>
       <Row className="justify-content-center">
-        <Col md="5" className="deadCenter">
+        <Col md="5" className="deadCenter text-center text-md-left">
           <h1 className="blue-header">See how SharedSchool works for your school</h1>
           <p className="gray headline">
             Empowering public and private schools through a shared economy model.
           </p>
-          <DemoBtn style={{alignSelf:'flex-start'}} />
+          <DemoBtn className="align-self-md-baseline mb-3 mb-md-0" />
         </Col>
         <Col md="6" className="deadCenter">
           <Row className="justify-content-center">
@@ -71,7 +71,7 @@ export function Home(){
       </Row>
       <div className="deadCenter">
         <Row className="justify-content-center">
-          <Col><h1 className="blue-header">The SharedSchool Process</h1></Col>
+          <Col><h1 className="blue-header mb-3">The SharedSchool Process</h1></Col>
         </Row>
         <Row className="justify-content-center process">
           <Col>
