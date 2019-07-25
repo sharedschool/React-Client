@@ -18,8 +18,8 @@ export class MyNavBar extends React.Component{
 							<NavDropdown.Item href="/uses/">Use Cases</NavDropdown.Item>
 						</NavDropdown>
 						<NavDropdown title="RESOURCES" id="resources-dropdown">
-							<NavDropdown.Item href="/blog/">Blog</NavDropdown.Item>
 							<NavDropdown.Item href="/faq/">FAQ</NavDropdown.Item>
+							<NavDropdown.Item href="/blog/">Blog</NavDropdown.Item>
 						</NavDropdown>
 						<NavDropdown title="COMPANY" id="company-dropdown">
 							<NavDropdown.Item href="/about/">About Us</NavDropdown.Item>

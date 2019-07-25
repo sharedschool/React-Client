@@ -18,21 +18,21 @@ export function MyFooter(){
 			<Row className="justify-content-left">
 				<Col md="2">
 					<Nav className="flex-column">
-						<Nav.Link href="#" className="active">Platform</Nav.Link>
+						<Nav.Link href="/platform/" className="active">Platform</Nav.Link>
 						<Nav.Link href="/platform/">Platform Overview</Nav.Link>
 						<Nav.Link href="/uses/">Use Cases</Nav.Link>
 					</Nav>
 				</Col>
 				<Col md="2">
 					<Nav className="flex-column">
-						<Nav.Link href="#" className="active">Resources</Nav.Link>
-						<Nav.Link href="/blog/">Blog</Nav.Link>
+						<Nav.Link href="/faq/" className="active">Resources</Nav.Link>
 						<Nav.Link href="/faq/">FAQ</Nav.Link>
+						<Nav.Link href="/blog/">Blog</Nav.Link>
 					</Nav>
 				</Col>
 				<Col md="2">
 					<Nav className="flex-column">
-						<Nav.Link href="#" className="active">Company</Nav.Link>
+						<Nav.Link href="/about/" className="active">Company</Nav.Link>
 						<Nav.Link href="/about/">About Us</Nav.Link>
 						<Nav.Link href="/contact/">Contact Us</Nav.Link>
 					</Nav>
