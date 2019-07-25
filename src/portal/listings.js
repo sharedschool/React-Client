@@ -1,7 +1,8 @@
 import React from 'react';
-import { Row, Col, Form, Button } from "react-bootstrap";
+import { Row, Col, Form, Button, Modal } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import './listings.css';
+import { AddListingBtn } from '../helpers/modals';
 import { Listing } from './helpers/listing';
 
 
@@ -25,9 +26,9 @@ export class Listings extends React.Component {
 
 	renderListings(){
 		const items = [
-			{title: "Chromebook", institution: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", image: "https://picsum.photos/160"},
-			{title: "Microscope", institution: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", image: "https://picsum.photos/150"},
-			{title: "Chair", institution: "WHRHS", category: "Furniture", description: "A spinny desk chair", image: "https://picsum.photos/170"}
+			{title: "Chromebook", institution: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", image: "https://picsum.photos/150?random=1"},
+			{ title: "Microscope", institution: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", image: "https://picsum.photos/150?random=2"},
+			{ title: "Chair", institution: "WHRHS", category: "Furniture", description: "A spinny desk chair", image: "https://picsum.photos/150?random=3"}
 		];
 		const {...item_props} = items[0];
 		let els = [];
@@ -64,7 +65,7 @@ export class Listings extends React.Component {
 						</Form>
 					</Col>
 					<Col md="3">
-						<Button variant="primary" size="md" className="green-btn">Add New Listing</Button>
+						<AddListingBtn />
 					</Col>
 				</Row>
 				<Row className="justify-content-left">

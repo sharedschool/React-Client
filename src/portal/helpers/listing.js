@@ -11,10 +11,10 @@ export class Listing extends React.Component {
 					<img src={this.props.image} alt={this.props.title} height="150"/>
 				</Col>
 				<Col md="6">
-				<p>Title: {this.props.title}</p>
-				<p>Institution: {this.props.institution}</p>
-				<p>Category: {this.props.category}</p>
-				<p>Description: {this.props.description}</p>
+				<p><b>Title:</b> {this.props.title}</p>
+				<p><b>Institution:</b> {this.props.institution}</p>
+				<p><b>Category:</b> {this.props.category}</p>
+				<p><b>Description:</b> {this.props.description}</p>
 				</Col>
 			</Row>
 		);

@@ -29,23 +29,20 @@ export class Landing extends React.Component {
 					</Row>
 					: <></>
 				}
-				<Row className="justify-content-center">
-					<Col md="1" className="text-center">
-						<img src="https://picsum.photos/100/100" alt="Profile Picture" />
-					</Col>
-					<Col md="2" className="text-center">
-						<h2 className="blue-header">John Doe</h2>
-						<h3 className="gray headline">Institution: WHRHS</h3>
-						<p className="gray">Account Type: Admin</p>
-					</Col>
-					<Col md="2" className="text-center">
-						<Button variant="primary" size="lg" className="green-btn">Edit Profile</Button>
-					</Col>
-					<Col md="3" className="text-center">
-						<Button variant="primary" size="lg" className="green-btn">Manage Listings</Button>
-					</Col>
-					<Col md="2" className="text-center">
-						<Button variant="primary" size="lg" className="green-btn">Add Listing</Button>
+				<Row className="justify-content-center m-3 border rounded">
+					<Col>
+						<Row className="align-items-center mb-4">
+							<img src="https://picsum.photos/200" alt="Profile Picture" className="mr-3"/>
+							<Col className="">
+								<h2 className="blue-header">John Doe</h2>
+								<h3 className="gray headline">Institution: WHRHS</h3>
+								<p className="gray">Account Type: Admin</p>
+							</Col>
+						</Row>
+						<Row>
+							<Button variant="primary" size="lg" className="green-btn mr-2">Edit Profile</Button>
+							<a href="/portal/listings/"><Button variant="primary" size="lg" className="green-btn">Manage Listings</Button></a>
+						</Row>
 					</Col>
 				</Row>
 			</div>
