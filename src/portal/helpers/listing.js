@@ -16,6 +16,7 @@ export class Listing extends React.Component {
 					<p><b>Category:</b> {this.props.category}</p>
 					<p className="mb-0"><b>Description:</b> {this.props.description}</p>
 				</Col>
+        {this.props.suffix}
 			</Row>
 		);
 	}

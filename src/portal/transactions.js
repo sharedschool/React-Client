@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import { Row, Col } from "react-bootstrap";
-import { Listing } from './helpers/listing';
+import { Transaction } from './helpers/transaction';
 
 export class Transactions extends React.Component {
     renderListings() {
@@ -10,10 +10,16 @@ export class Transactions extends React.Component {
             { title: "Microscope", institution: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", image: "https://picsum.photos/150?random=2" },
             { title: "Chair", institution: "WHRHS", category: "Furniture", description: "A spinny desk chair", image: "https://picsum.photos/150?random=3" }
         ];
-        const { ...item_props } = items[0];
+        const trans = [
+            { contact: "James Naryarn", date: "7/2/1986", listing: null},
+            { contact: "James Narayan", date: "7/3/1986", listing: null},
+            { contact: "James Narayanan", date: "7/4/1986", listing: null}
+        ]
+        const { ...item_props } = trans[0];
         let els = [];
-        for (var i = 0; i < items.length; i++) {
-            els.push(<Listing {...item_props} {...items[i]} />);
+        for (var i = 0; i < trans.length; i++) {
+            trans[i].listing = items[i];
+            els.push(<Transaction {...item_props} {...trans[i]} />);
         }
         return els;
     }

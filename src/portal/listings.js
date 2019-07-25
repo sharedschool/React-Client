@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Form } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import './listings.css';
-import { AddListingBtn } from '../helpers/modals';
+import { AddListingBtn } from './helpers/modals';
 import { Listing } from './helpers/listing';
 
 
@@ -26,7 +26,7 @@ export class Listings extends React.Component {
 
 	renderListings(){
 		const items = [
-			{title: "Chromebook", institution: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", image: "https://picsum.photos/150?random=1"},
+			{ title: "Chromebook", institution: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", image: "https://picsum.photos/150?random=1"},
 			{ title: "Microscope", institution: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", image: "https://picsum.photos/150?random=2"},
 			{ title: "Chair", institution: "WHRHS", category: "Furniture", description: "A spinny desk chair", image: "https://picsum.photos/150?random=3"}
 		];
