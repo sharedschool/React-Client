@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Form, Button, Modal } from "react-bootstrap";
+import { Row, Col, Form } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import './listings.css';
 import { AddListingBtn } from '../helpers/modals';
@@ -49,23 +49,23 @@ export class Listings extends React.Component {
 						<h1 className="blue-header">My Listings</h1>
 					</Col>
 				</Row>
-				<Row className="justify-content-left">
-					<Col md="4">
-						<Form onSubmit={this.handleSort}>
-							<Form.Group controlId="sortby">
-								<Form.Label>Sort by:</Form.Label>
-								<Form.Control as="select" onChange={this.handleChange} value={this.state.sortby} style={{display: 'inline-block', width: '200px'}}>
-									<option value="recent">Recently added</option>
-									<option value="category">Category</option>
-									<option value="alpha">Alphabetical</option>
-									<option value="asc">Price (Low to High)</option>
-									<option value="desc">Price (High to Low)</option>
-								</Form.Control>
-							</Form.Group>
-						</Form>
-					</Col>
-					<Col md="3">
-						<AddListingBtn />
+				<Row>
+					<Col md="12"> {/* This is necessary to get the left and right borders even with the items below */}
+						<Row>
+							<Form onSubmit={this.handleSort} className="mr-auto">
+								<Form.Group controlId="sortby" className="mb-0">
+									<Form.Label className="mr-1">Sort by:</Form.Label>
+									<Form.Control as="select" onChange={this.handleChange} value={this.state.sortby} style={{display: 'inline-block', width: '200px'}}>
+										<option value="recent">Recently added</option>
+										<option value="category">Category</option>
+										<option value="alpha">Alphabetical</option>
+										<option value="asc">Price (Low to High)</option>
+										<option value="desc">Price (High to Low)</option>
+									</Form.Control>
+								</Form.Group>
+							</Form>
+							<AddListingBtn />
+						</Row>
 					</Col>
 				</Row>
 				<Row className="justify-content-left">
