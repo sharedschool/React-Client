@@ -26,10 +26,65 @@ export class Listings extends React.Component {
 
 	renderListings(){
 		const items = [
-			{ title: "Chromebook", institution: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", image: "https://picsum.photos/150?random=1"},
-			{ title: "Microscope", institution: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", image: "https://picsum.photos/150?random=2"},
-			{ title: "Chair", institution: "WHRHS", category: "Furniture", description: "A spinny desk chair", image: "https://picsum.photos/150?random=3"}
+			{ title: "Chromebook", institution: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", price: 200, image: "https://picsum.photos/150?random=1"},
+			{ title: "Microscope", institution: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", price: 50, image: "https://picsum.photos/150?random=2"},
+			{ title: "Chair", institution: "WHRHS", category: "Furniture", description: "A spinny desk chair", price: 20, image: "https://picsum.photos/150?random=3"},
+			{ title: "Bag", institution: "WHRHS", category: "Accessories", description: "13 inch Acer Chromebook", price: 25, image: "https://picsum.photos/150?random=4"},
+			{ title: "Desk", institution: "WHRHS", category: "Furniture", description: "Solid metal microscope w/light", price: 40, image: "https://picsum.photos/150?random=5"},
+			{ title: "Textbook", institution: "WHRHS", category: "Books", description: "A spinny desk chair", price: 10, image: "https://picsum.photos/150?random=6"}
 		];
+
+		function swapItems(a, b) {
+			let temp = items[a];
+			items[a] = items[b];
+			items[b] = temp;
+		}
+
+		if(this.state.sortby === "category") {
+			for(let i = 0; i<items.length-1; i++) {
+				let minIndex = i;
+				for(let j = i+1; j<items.length; j++) {
+					if(items[j].category < items[minIndex].category)
+						minIndex = j;
+				}
+				if(minIndex !== i)
+					swapItems(i, minIndex);
+			}
+		}
+		else if(this.state.sortby === "alpha") {
+			for (let i = 0; i < items.length - 1; i++) {
+				let minIndex = i;
+				for (let j = i + 1; j < items.length; j++) {
+					if (items[j].title < items[minIndex].title)
+						minIndex = j;
+				}
+				if (minIndex !== i)
+					swapItems(i, minIndex);
+			}			
+		}
+		else if (this.state.sortby === "asc") {
+			for (let i = 0; i < items.length - 1; i++) {
+				let minIndex = i;
+				for (let j = i + 1; j < items.length; j++) {
+					if (items[j].price < items[minIndex].price)
+						minIndex = j;
+				}
+				if (minIndex !== i)
+					swapItems(i, minIndex);
+			}
+		}
+		else if (this.state.sortby === "desc") {
+			for (let i = 0; i < items.length - 1; i++) {
+				let maxIndex = i;
+				for (let j = i + 1; j < items.length; j++) {
+					if (items[j].price > items[maxIndex].price)
+						maxIndex = j;
+				}
+				if (maxIndex !== i)
+					swapItems(i, maxIndex);
+			}
+		}
+		
 		const {...item_props} = items[0];
 		let els = [];
 		for (var i = 0; i < items.length; i++){

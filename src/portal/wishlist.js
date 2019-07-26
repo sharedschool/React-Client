@@ -6,9 +6,9 @@ import { Listing } from './helpers/listing';
 export class Wishlist extends React.Component {
     renderListings() {
         const items = [
-            { title: "Chromebook", institution: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", image: "https://picsum.photos/150?random=1" },
-            { title: "Microscope", institution: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", image: "https://picsum.photos/150?random=2" },
-            { title: "Chair", institution: "WHRHS", category: "Furniture", description: "A spinny desk chair", image: "https://picsum.photos/150?random=3" }
+            { title: "Chromebook", institution: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", price: 200,image: "https://picsum.photos/150?random=1" },
+            { title: "Microscope", institution: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", price: 50,image: "https://picsum.photos/150?random=2" },
+            { title: "Chair", institution: "WHRHS", category: "Furniture", description: "A spinny desk chair", price: 20,image: "https://picsum.photos/150?random=3" }
         ];
         const { ...item_props } = items[0];
         let els = [];
