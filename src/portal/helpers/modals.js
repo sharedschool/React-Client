@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button, Form } from "react-bootstrap";
+import { Col, Modal, Button, Form, InputGroup } from "react-bootstrap";
 
 export class AddListingBtn extends React.Component {
 	constructor(props, context) {
@@ -13,10 +13,12 @@ export class AddListingBtn extends React.Component {
 		this.state = {
 			show: false,
 			isLoading: false,
+			image: undefined,
 			title: "",
 			institution: "",
 			category: "",
-			description: ""
+			description: "",
+			price: undefined
 		};
 	}
 
@@ -51,47 +53,76 @@ export class AddListingBtn extends React.Component {
 						<Modal.Title as="h5">Add a Listing</Modal.Title>
 					</Modal.Header>
 					<Modal.Body style={{ textAlign: 'center' }}>
-						<div className="login-form">
-							<Form/*  onSubmit={this.handleSubmit} */>
-								<Form.Group controlId="title">
-									<Form.Label>Title</Form.Label>
+						<Form onSubmit={this.handleSubmit}>
+							<Form.Group controlId="image" className="custom-file mb-2">
+								<Form.Label className="custom-file-label">Upload Image</Form.Label>
+								<Form.Control
+									className="custom-file-input"
+									type="file"
+									accept="image/*"
+									value={this.state.image}
+									onChange={this.handleChange}
+									/>
+							</Form.Group>
+							<Form.Row>
+								<Col>
+									<Form.Group controlId="title">
+										<Form.Label>Title</Form.Label>
+										<Form.Control
+											type="text"
+											placeholder="Title"
+											value={this.state.title}
+											onChange={this.handleChange}
+										/>
+									</Form.Group>
+								</Col>
+								<Col>
+									<Form.Group controlId="category">
+										<Form.Label>Category</Form.Label>
+										<Form.Control
+											type="text"
+											placeholder="Category"
+											value={this.state.category}
+											onChange={this.handleChange}
+										/>
+									</Form.Group>
+								</Col>
+							</Form.Row>
+							<Form.Group controlId="institution">
+								<Form.Label>Institution</Form.Label>
+								<Form.Control
+									type="text"
+									placeholder="Institution"
+									value={this.state.institution}
+									onChange={this.handleChange}
+								/>
+							</Form.Group>
+							<Form.Group controlId="description">
+								<Form.Label>Description</Form.Label>
+								<Form.Control
+									as="textarea"
+									placeholder="Description"
+									value={this.state.description}
+									onChange={this.handleChange}
+								/>
+							</Form.Group>
+							<Form.Group controlId="price">
+								<Form.Label>Price</Form.Label>
+								<InputGroup>
+									<InputGroup.Prepend>
+										<InputGroup.Text id="inputGroupPrepend">$</InputGroup.Text>
+									</InputGroup.Prepend>	
 									<Form.Control
-										type="text"
-										placeholder="Title"
-										value={this.state.title}
+										type="number"
+										placeholder="Price"
+										min="0"
+										value={this.state.price}
 										onChange={this.handleChange}
 									/>
-								</Form.Group>
-								<Form.Group controlId="institution">
-									<Form.Label>Institution</Form.Label>
-									<Form.Control
-										type="text"
-										placeholder="Institution"
-										value={this.state.institution}
-										onChange={this.handleChange}
-									/>
-								</Form.Group>
-								<Form.Group controlId="category">
-									<Form.Label>Category</Form.Label>
-									<Form.Control
-										type="text"
-										placeholder="Category"
-										value={this.state.category}
-										onChange={this.handleChange}
-									/>
-								</Form.Group>
-								<Form.Group controlId="description">
-									<Form.Label>Description</Form.Label>
-									<Form.Control
-										type="text"
-										placeholder="Description"
-										value={this.state.description}
-										onChange={this.handleChange}
-									/>
-								</Form.Group>
-								<Button type="submit" variant="primary">Submit</Button>
-							</Form>
-						</div>
+								</InputGroup>
+							</Form.Group>
+							<Button type="submit" variant="primary">Submit</Button>
+						</Form>
 					</Modal.Body>
 				</Modal>
 			</>
