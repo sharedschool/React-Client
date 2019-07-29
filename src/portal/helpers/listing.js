@@ -6,11 +6,11 @@ import './listing.css';
 export class Listing extends React.Component {
 	render(){
 		return (
-			<Row className="listing justify-content-left align-items-center">
-				<Col md="2">
+			<Row className="listing justify-content-center justify-content-left-md align-items-center text-center text-md-left">
+				<Col xs="12" md="3" lg="2">
 					<img src={this.props.image} alt={this.props.title} height="150"/>
 				</Col>
-				<Col md="6">
+				<Col xs="12" md="6">
 					<p><b>Title:</b> {this.props.title}</p>
 					<p><b>Institution:</b> {this.props.institution}</p>
 					<p><b>Category:</b> {this.props.category}</p>
@@ -19,7 +19,7 @@ export class Listing extends React.Component {
 				<Col>
 					{this.props.price ? <h1>${this.props.price}</h1> : ""}
 				</Col>
-        {this.props.suffix}
+        		{this.props.suffix}
 			</Row>
 		);
 	}
