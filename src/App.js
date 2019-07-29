@@ -45,20 +45,20 @@ export class App extends React.Component {
 	}
 
   render(){
-	const childProps = {
+  	const childProps = {
   		isAuthenticated: this.state.isAuthenticated,
   		userHasAuthenticated: this.userHasAuthenticated,
-		logOut: this.handleLogout
-	  };
-	return (
-	  !this.state.isAuthenticating &&
-	  <div className="App">
-		<Switch>
-		  <AuthenticatedRoute path="/portal" component={Portal} props={childProps} />
-		  <AppliedRoute component={MyMain} props={childProps} />
-		</Switch>
-	  </div>
-	);
+  		logOut: this.handleLogout
+  	  };
+  	return (
+  	  !this.state.isAuthenticating &&
+  	  <div className="App">
+  		<Switch>
+  		  <AuthenticatedRoute path="/portal" component={Portal} props={childProps} />
+  		  <AppliedRoute component={MyMain} props={childProps} />
+  		</Switch>
+  	  </div>
+  	);
   }
 }
 
