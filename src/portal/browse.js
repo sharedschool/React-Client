@@ -31,6 +31,9 @@ export class Browse extends React.Component {
 	renderHome(){
 		var style = {
 			backgroundImage: "url('/img/browse-landing.png')",
+			backgroundSize: "cover",
+			backgroundRepeat: "no-repeat",
+			backgroundPosition: "center",
 			height: "500px"
 		};
 		return (
@@ -39,7 +42,7 @@ export class Browse extends React.Component {
 					<Form onSubmit={this.handleSubmit}>
 						<Row>
 							<Col md="12">
-								<h1 className="blue-header" style={{color: 'white'}}>Find the educational materials you need.</h1>
+								<h1 className="blue-header text-white">Find the educational materials you need.</h1>
 							</Col>
 						</Row>
 						<Row>
@@ -55,16 +58,16 @@ export class Browse extends React.Component {
 							</Col>
 						</Row>
 						<Row>
-							<Col md="3">
+							<Col sm="6" md="3">
 								<Filters.Price value={this.state.price} callback={this.handleChange} />
 							</Col>
-							<Col md="3">
+							<Col sm="6" md="3">
 								<Filters.Location value={this.state.location} callback={this.handleChange} />
 							</Col>
-							<Col md="3">
+							<Col sm="6" md="3">
 								<Filters.Subject value={this.state.subject} callback={this.handleChange} />
 							</Col>
-							<Col md="3">
+							<Col sm="6" md="3">
 								<Filters.District value={this.state.district} callback={this.handleChange} />
 							</Col>
 						</Row>
