@@ -18,7 +18,7 @@ export class Browse extends React.Component {
 			price: "",
 			location: "",
 			subject: "",
-			institution: ""
+			district: ""
 		};
 	}
 
@@ -65,7 +65,7 @@ export class Browse extends React.Component {
 								<Filters.Subject value={this.state.subject} callback={this.handleChange} />
 							</Col>
 							<Col md="3">
-								<Filters.Institution value={this.state.institution} callback={this.handleChange} />
+								<Filters.District value={this.state.district} callback={this.handleChange} />
 							</Col>
 						</Row>
 					</Form>

@@ -35,7 +35,7 @@ export class Landing extends React.Component {
 							<img src="https://picsum.photos/200" alt="Profile Picture" className="mr-3"/>
 							<Col className="">
 								<h2 className="blue-header">John Doe</h2>
-								<h3 className="gray headline">Institution: WHRHS</h3>
+								<h3 className="gray headline">District: WHRHS</h3>
 								<p className="gray">Account Type: Admin</p>
 							</Col>
 						</Row>

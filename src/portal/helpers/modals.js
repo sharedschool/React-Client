@@ -15,7 +15,7 @@ export class AddListingBtn extends React.Component {
 			isLoading: false,
 			image: undefined,
 			title: "",
-			institution: "",
+			district: "",
 			category: "",
 			description: "",
 			price: undefined
@@ -88,12 +88,12 @@ export class AddListingBtn extends React.Component {
 									</Form.Group>
 								</Col>
 							</Form.Row>
-							<Form.Group controlId="institution">
-								<Form.Label>Institution</Form.Label>
+							<Form.Group controlId="district">
+								<Form.Label>District</Form.Label>
 								<Form.Control
 									type="text"
-									placeholder="Institution"
-									value={this.state.institution}
+									placeholder="District"
+									value={this.state.district}
 									onChange={this.handleChange}
 								/>
 							</Form.Group>

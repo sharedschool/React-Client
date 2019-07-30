@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import { Row, Col } from "react-bootstrap";
-import { Institution } from "./helpers/institution";
+import { District } from "./helpers/district";
 
-export class Institutions extends React.Component {
+export class Districts extends React.Component {
 	renderListings() {
 		const items = [
 			{ name: "WHRHS", description: "A Great High School", image: "https://picsum.photos/150?random=1" },
@@ -13,7 +13,7 @@ export class Institutions extends React.Component {
 		const { ...item_props } = items[0];
 		let els = [];
 		for (var i = 0; i < items.length; i++) {
-			els.push(<Institution {...item_props} {...items[i]} />);
+			els.push(<District {...item_props} {...items[i]} />);
 		}
 		return els;
 	}
@@ -22,11 +22,11 @@ export class Institutions extends React.Component {
 		return (
 			<div id="page-content" className="portal-wishlist-page">
 				<Helmet>
-					<title>My Institutions | SharedSchool</title>
+					<title>My Districts | SharedSchool</title>
 				</Helmet>
 				<Row className="justify-content-center">
 					<Col md="8" className="text-center">
-						<h1 className="blue-header">My Institutions</h1>
+						<h1 className="blue-header">My Districts</h1>
 					</Col>
 				</Row>
 				<Row className="justify-content-left">

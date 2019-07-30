@@ -33,31 +33,31 @@ export function Faq(){
         		Does SharedSchool take a commission from our transactions?
         	</h4>
         	<p class="gray">
-        		Nope! SharedSchool takes no commission from the transactions, meaning more profits for your institutions and more money saved.
+        		Nope! SharedSchool takes no commission from the transactions, meaning more profits for your districts and more money saved.
         	</p>
         	<h4 class="blue-header">
         		How can SharedSchool make and/or save me money?
         	</h4>
         	<p class="gray">
-        		Many institutions either have surplus materials that no longer provide them with value or need materials that they may not be able to fully afford. We can generate extra revenue for your school by listing surplus materials onto the SharedSchool platform and connecting them to other schools who need these items. The schools wanting these materials will receive them at a cheaper price while the school selling the item will make extra money of resources that may have otherwise gone to waste.
+        		Many districts either have surplus materials that no longer provide them with value or need materials that they may not be able to fully afford. We can generate extra revenue for your school by listing surplus materials onto the SharedSchool platform and connecting them to other schools who need these items. The schools wanting these materials will receive them at a cheaper price while the school selling the item will make extra money of resources that may have otherwise gone to waste.
         	</p>
         	<h4 class="blue-header">
         		Who uses SharedSchool?
         	</h4>
         	<p class="gray">
-        		We are primary focusing on educational institutions, namely public and private schools. Teachers and administrators are also a part of the SharedSchool network since they are affiliated with their own institution.
+        		We are primary focusing on educational districts, namely public and private schools. Teachers and administrators are also a part of the SharedSchool network since they are affiliated with their own district.
         	</p>
         	<h4 class="blue-header">
         		Why is SharedSchool different from other surplus centers?
         	</h4>
         	<p class="gray">
-        		SharedSchool is domain specific to education and we directly connect schools to each other based on your wants and surplus. Because only schools can use SharedSchool, this avoids the bidding process of getting rid of surplus, as found on GovDeals and other centers. Our goal is to ensure surplus is used to its full potential and create a flexible platform for all schools. Additionally, we are working towards social good, aiming to equal the educational playing field and provide institutions with essential materials at a cheaper cost, and enabling others to gain extra revenue in the process.
+        		SharedSchool is domain specific to education and we directly connect schools to each other based on your wants and surplus. Because only schools can use SharedSchool, this avoids the bidding process of getting rid of surplus, as found on GovDeals and other centers. Our goal is to ensure surplus is used to its full potential and create a flexible platform for all schools. Additionally, we are working towards social good, aiming to equal the educational playing field and provide districts with essential materials at a cheaper cost, and enabling others to gain extra revenue in the process.
         	</p>
         	<h4 class="blue-header">
         		What kind of items are SharedSchool eligible?
         	</h4>
         	<p class="gray">
-        		Almost anything you can think of. If your institution owns it and has used it as part of their educational curriculum, then chances are another school may need that same material. These items can range anywhere from a piano to binders to bunsen burners to markers. If you don’t know if anyone wants your item, list it anyway and let our platform do the rest.
+        		Almost anything you can think of. If your district owns it and has used it as part of their educational curriculum, then chances are another school may need that same material. These items can range anywhere from a piano to binders to bunsen burners to markers. If you don’t know if anyone wants your item, list it anyway and let our platform do the rest.
         	</p>
         	<h4 class="blue-header">
         		What if no one wants the material that I’m listing on SharedSchool?
@@ -69,13 +69,13 @@ export function Faq(){
         		What different abilities do administrator and user accounts have?
         	</h4>
         	<p class="gray">
-        		An administrator account is an “umbrella” account made so that administrators can have overarching approval abilities over the other users who will have access to that same institution’s account. Administrators handle the transactions (requests/listings) and teachers have the ability to make suggestions whether that be a request for an item or a potential new listing for the school. All accounts have the ability to browse the requests and listings on the platform but the final approval for any action comes from the administrator accounts.
+        		An administrator account is an “umbrella” account made so that administrators can have overarching approval abilities over the other users who will have access to that same district’s account. Administrators handle the transactions (requests/listings) and teachers have the ability to make suggestions whether that be a request for an item or a potential new listing for the school. All accounts have the ability to browse the requests and listings on the platform but the final approval for any action comes from the administrator accounts.
         	</p>
         	<h4 class="blue-header">
         		I’m a teacher and I’m not sure if I completely understand the process of how I can receive and/or list materials. Can you describe this process?
         	</h4>
         	<p class="gray">
-        		Once your institution has created their own administrator account, you will be able to create a separate user account under your institution’s account through a verification code. After creating your account, you will be able to suggest “wishes” for items and possible new listings for surplus in your school to be verified by an appropriate administrator. If verified, the request/listing will be added onto the SharedSchool platform and then accordingly matched with another institution.
+        		Once your district has created their own administrator account, you will be able to create a separate user account under your district’s account through a verification code. After creating your account, you will be able to suggest “wishes” for items and possible new listings for surplus in your school to be verified by an appropriate administrator. If verified, the request/listing will be added onto the SharedSchool platform and then accordingly matched with another district.
         	</p>
         	<h4 class="blue-header">
         		Why is it important to become a part of a shared economy?

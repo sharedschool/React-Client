@@ -61,16 +61,16 @@ export class Subject extends React.Component {
 	}
 }
 
-export class Institution extends React.Component {
+export class District extends React.Component {
 	render(){
 		return (
-			<Form.Group controlId="institution">
+			<Form.Group controlId="district">
 				<Form.Control
 					as="select"
 					value={this.props.value}
 					onChange={this.props.callback}
 				>
-					<option value="any">Any institution</option>
+					<option value="any">Any district</option>
 					<option>Public</option>
 					<option>Private</option>
 				</Form.Control>

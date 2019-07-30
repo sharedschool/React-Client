@@ -41,8 +41,8 @@ export class DemoBtn extends React.Component {
 									<Form.Control type="text" placeholder="Full name" name="name" />
 								</Form.Group>
 								<Form.Group>
-									<Form.Label>Institution</Form.Label>
-									<Form.Control type="text" placeholder="Institution" name="institution" />
+									<Form.Label>District</Form.Label>
+									<Form.Control type="text" placeholder="District" name="district" />
 								</Form.Group>
 								<Form.Group>
 									<Form.Label>Email address</Form.Label>

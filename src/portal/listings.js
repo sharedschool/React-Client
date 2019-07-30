@@ -26,12 +26,12 @@ export class Listings extends React.Component {
 
 	renderListings(){
 		const items = [
-			{ title: "Chromebook", institution: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", price: 200, image: "https://picsum.photos/150?random=1"},
-			{ title: "Microscope", institution: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", price: 50, image: "https://picsum.photos/150?random=2"},
-			{ title: "Chair", institution: "WHRHS", category: "Furniture", description: "A spinny desk chair", price: 20, image: "https://picsum.photos/150?random=3"},
-			{ title: "Bag", institution: "WHRHS", category: "Accessories", description: "A quality leather bag", price: 25, image: "https://picsum.photos/150?random=4"},
-			{ title: "Desk", institution: "WHRHS", category: "Furniture", description: "A sturdy wooden desk", price: 40, image: "https://picsum.photos/150?random=5"},
-			{ title: "Textbook", institution: "WHRHS", category: "Books", description: "An informative textbook", price: 10, image: "https://picsum.photos/150?random=6"}
+			{ title: "Chromebook", district: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", price: 200, image: "https://picsum.photos/150?random=1"},
+			{ title: "Microscope", district: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", price: 50, image: "https://picsum.photos/150?random=2"},
+			{ title: "Chair", district: "WHRHS", category: "Furniture", description: "A spinny desk chair", price: 20, image: "https://picsum.photos/150?random=3"},
+			{ title: "Bag", district: "WHRHS", category: "Accessories", description: "A quality leather bag", price: 25, image: "https://picsum.photos/150?random=4"},
+			{ title: "Desk", district: "WHRHS", category: "Furniture", description: "A sturdy wooden desk", price: 40, image: "https://picsum.photos/150?random=5"},
+			{ title: "Textbook", district: "WHRHS", category: "Books", description: "An informative textbook", price: 10, image: "https://picsum.photos/150?random=6"}
 		];
 
 		function swapItems(a, b) {

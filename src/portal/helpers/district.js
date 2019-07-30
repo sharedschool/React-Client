@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from "react-bootstrap";
 
-export class Institution extends React.Component {
+export class District extends React.Component {
 	render() {
 		return (
 			<Row className="listing justify-content-left align-items-center">

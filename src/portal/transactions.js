@@ -6,9 +6,9 @@ import { Transaction } from './helpers/transaction';
 export class Transactions extends React.Component {
 	renderListings() {
 		const items = [
-			{ title: "Chromebook", institution: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", image: "https://picsum.photos/150?random=1" },
-			{ title: "Microscope", institution: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", image: "https://picsum.photos/150?random=2" },
-			{ title: "Chair", institution: "WHRHS", category: "Furniture", description: "A spinny desk chair", image: "https://picsum.photos/150?random=3" }
+			{ title: "Chromebook", district: "WHRHS", category: "Computer", description: "13 inch Acer Chromebook", image: "https://picsum.photos/150?random=1" },
+			{ title: "Microscope", district: "WHRHS", category: "Lab Equipment", description: "Solid metal microscope w/light", image: "https://picsum.photos/150?random=2" },
+			{ title: "Chair", district: "WHRHS", category: "Furniture", description: "A spinny desk chair", image: "https://picsum.photos/150?random=3" }
 		];
 		const trans = [
 			{ contact: "James Naryarn", date: "7/2/1986", listing: null},

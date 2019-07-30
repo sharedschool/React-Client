@@ -16,7 +16,7 @@ export class MyNavbar extends React.Component {
 							<NavDropdown.Item href="/portal/listings/">My Listings</NavDropdown.Item>
 							<NavDropdown.Item href="/portal/wishlist/">My Wish List</NavDropdown.Item>
 							<NavDropdown.Item href="/portal/transactions/">My Transactions</NavDropdown.Item>
-							<NavDropdown.Item href="/portal/institutions/">My Institutions</NavDropdown.Item>
+							<NavDropdown.Item href="/portal/districts/">My Districts</NavDropdown.Item>
 						</NavDropdown>
 						<Nav.Item>
 							<Nav.Link href="/portal/browse/">BROWSE</Nav.Link>

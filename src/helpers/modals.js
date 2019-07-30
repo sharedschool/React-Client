@@ -194,7 +194,7 @@ export class SignupBtn extends React.Component {
 					/>
 				</Form.Group>
 				<Form.Group controlId="email">
-					<Form.Label>Email address (preferably institution)</Form.Label>
+					<Form.Label>Email address (preferably district)</Form.Label>
 					<Form.Control
 						type="email"
 						placeholder="e.g. jdoe@school.org"

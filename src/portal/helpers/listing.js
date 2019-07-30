@@ -12,7 +12,7 @@ export class Listing extends React.Component {
 				</Col>
 				<Col xs="12" md="6">
 					<p><b>Title:</b> {this.props.title}</p>
-					<p><b>Institution:</b> {this.props.institution}</p>
+					<p><b>District:</b> {this.props.district}</p>
 					<p><b>Category:</b> {this.props.category}</p>
 					<p className="mb-0"><b>Description:</b> {this.props.description}</p>
 				</Col>
